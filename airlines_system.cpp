@@ -19,6 +19,7 @@ int main(void){
 	cin >> i;
 	cout << "\n" << "You have choose " << i << "\n";
 
+	cout << string(50, '\n');
 	return 0;
 
 }
