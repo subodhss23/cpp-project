@@ -1,21 +1,20 @@
 #include<iostream>
 using namespace std;
 
-class Vechicle{
+class Car{
 	public:
 		int year;
-		string model;		
+		string model;
+
+		void newmethod();
 };
 
+void Car::newmethod(){
+	cout << "Has this thing changed yet?" << "\n";
+}
+
 int main(){
-		
-	Vechicle newobj;
-
-	newobj.year = 12;
-	newobj.model = "Toyota";
-
-	cout << newobj.year << "\n";
-	cout << newobj.model << "\n";
-
+	Car newobj;
+	newobj.newmethod();
 	return 0;
 }
