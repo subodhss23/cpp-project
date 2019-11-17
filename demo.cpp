@@ -1,20 +1,23 @@
 #include<iostream>
 using namespace std;
 
-class Car{
+class Newclass{
 	public:
-		int year;
-		string model;
+	void print(){
+		cout << "What is up??" << "\n";
+	}
 
-		void newmethod();
+	void printing_again(int x);
 };
 
-void Car::newmethod(){
-	cout << "Has this thing changed yet?" << "\n";
+void Newclass::printing_again(int x){
+	cout << "We are printing again " << x << "\n";
 }
 
 int main(){
-	Car newobj;
-	newobj.newmethod();
+	Newclass newobj;
+
+	newobj.print();
+	newobj.printing_again(5);
 	return 0;
 }
