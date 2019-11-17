@@ -29,6 +29,11 @@ class Vechicle{
 		}
 };
 
+class Another_vechicle : public Vechicle{
+	public:
+		string model = "Mustang";
+};
+
 int main(){
 	// Employee newobj;
 	// newobj.setSalary(1000);
