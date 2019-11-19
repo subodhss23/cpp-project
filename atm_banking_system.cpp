@@ -22,8 +22,8 @@ class ATM{
 	void options(){
 		cout << "Choose an option from below  " << "\n";
 		cout << "1. Check balance. " << "\n";
-		cout << "2. View balance in checking account. " << "\n";
-		cout << "3. View balance in saving account. " << "\n";
+		cout << "2. Deposit cash. " << "\n";
+		cout << "3. Withdraw cash. " << "\n";
 		
 	}
 
@@ -32,14 +32,28 @@ class ATM{
 		if(n == 1){
 			cout << "Your balance is $40 " << "\n";
 		} else if (n == 2){
-			cout << "Your balance in checking account is $100" << "\n";
+			cout << "How much money do you want to deposit?" << "\n";
+			int cash;
+			cin >> cash;
+
+			system("clear");
+			cout << "You have deposited $" << cash  << "\n";
 		} else if (n == 3){
-			cout << "your balance in saving account is $0" << "\n";
+			cout << "How much cash do you want to withdraw?" << "\n";
+			
+			int avail_cash = 1000;
+			int withdraw_cash;
+			
+			cin >> withdraw_cash;
+			
+			int new_amount = avail_cash - withdraw_cash;
+			cout << "you have $" << new_amount << " in your account" << "\n";
 		} else {
 			cout << "not a valid option" << "\n";
 		}
 	}	
 
+	
 };
 
 
