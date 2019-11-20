@@ -1,25 +1,28 @@
 #include<iostream>
 using namespace std;
 
-typedef unsigned short int USHORT;
-
-
-inline void add(){
-	USHORT i = 10;
-	USHORT j = 20;
-	
-	USHORT addi = 0;
-
-	addi = i + j;
-
-	cout << addi << endl;
-
-}
-
 
 int main(){
-	inline void add();
+	int localvar = 5;
+	int *plocal = &localvar;
+	int *pheap = new int;
+	if (pheap == NULL){
+		cout << "Error! No memory for pheap!";
+		return 0;
+	}
+	*pheap = 7;
+	cout << "localvar: " << localvar << "\n";
+	cout << "*plocal: " << *plocal << "\n";
+	cout << "*pheap: " << *pheap << "\n";
 
+	delete pheap;
+	if (pheap == NULL){
+		cout << "Error! No memory for pheap!!";
+		return 0;
+	}
+	
+	*pheap = 9;
+	cout << "*pheap: " << *pheap << "\n";
+	delete pheap;
 	return 0;
 }
-	
